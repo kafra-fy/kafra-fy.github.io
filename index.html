@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ahmad Ababil | Portofolio</title>
+  <meta name="description" content="Portofolio Ahmad Ababil: aplikasi, game, dan website.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <noscript><style>[data-reveal]{opacity:1;translate:none}</style></noscript>
+</head>
+<body>
+  <div class="progres" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="logo" href="#atas">Ahmad Ababil</a>
+    <nav aria-label="Navigasi utama">
+      <a href="#tentang">Tentang</a>
+      <a href="#proyek">Proyek</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+  </header>
+
+  <main id="atas">
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="bola b1" style="--k:-0.14" aria-hidden="true"></div>
+      <div class="bola b2" style="--k:0.1" aria-hidden="true"></div>
+      <div class="bola b3" style="--k:-0.06" aria-hidden="true"></div>
+      <h1 class="nama" data-text="Ahmad Ababil">Ahmad Ababil</h1>
+      <p class="intro">Pelajar yang suka membuat <span class="ketik" id="ketik">aplikasi</span><span class="kursor" aria-hidden="true"></span></p>
+    </section>
+
+    <div class="pita" aria-hidden="true">
+      <div class="jalur" id="jalur">
+        <span>Aplikasi</span><span>Game</span><span>Website</span><span>Desain</span><span>Ide baru</span>
+      </div>
+    </div>
+
+    <!-- TENTANG -->
+    <section class="blok" id="tentang">
+      <h2 data-reveal>Tentang</h2>
+      <div class="tentang-grid">
+        <figure class="foto" data-reveal>
+          <img src="gambar/77335318597097926.jfif" alt="Foto Ahmad Ababil" onerror="this.parentElement.classList.add('kosong')">
+        </figure>
+        <div data-reveal style="--i:1">
+          <p>Hola, saya Abiel, dari kelas XI Administrator. Saya belajar membuat program dan desain secara mandiri lewat proyek kecil yang saya kerjakan di luar jam sekolah.</p>
+          <p>Saya suka proyek yang bentuknya jelas dan bisa dicoba langsung. Hobi utama saya adalah bermain Rubik, dan saya ingin menjadi profesional di bidang ini. Saya juga sangat ingin menjadi profesional di bidang teknologi, terutama pengembangan perangkat lunak.</p>
+          <h3>Yang saya pakai</h3>
+          <ul class="alat">
+            <li>HTML dan CSS</li><li>JavaScript</li><li>Python</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- MINI GAME SKY JUMP -->
+    <section class="sky-game-area" id="sky-game">
+      <!-- Papan Skor Rata Kanan (Hanya Angka Skor) -->
+      <div class="sky-score-box">
+        <span id="sj-score">0</span>
+      </div>
+
+      <!-- Canvas Game Menyatu Latar Belakang -->
+      <canvas id="skyCanvas"></canvas>
+    </section>
+
+    <!-- PROYEK: kartu dibuat otomatis dari daftar PROYEK di script.js -->
+    <section class="blok" id="proyek">
+      <h2 data-reveal>Proyek</h2>
+      <div class="filter" role="group" aria-label="Filter proyek">
+        <button type="button" data-filter="semua" aria-pressed="true">Semua</button>
+        <button type="button" data-filter="aplikasi" aria-pressed="false">Aplikasi</button>
+        <button type="button" data-filter="game" aria-pressed="false">Game</button>
+        <button type="button" data-filter="web" aria-pressed="false">Web</button>
+      </div>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <!-- KONTAK -->
+    <section class="blok" id="kontak">
+      <h2 data-reveal>Kontak</h2>
+      <div data-reveal style="--i:1">
+        <p>Ingin ngobrol atau kerja bareng? Kirim pesan ke:</p>
+        <a class="email" href="mailto:Billltsss0@gmail.com">Billltsss0@gmail.com</a>
+        <ul class="sosial">
+          <li><a href="https://github.com/kafra-fy" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.instagram.com/fylear_/" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="kaki"><p>&copy; <span id="tahun">2026</span> Ahmad Ababil</p></footer>
+
+  <dialog id="lightbox" aria-label="Galeri proyek">
+    <div class="lb-isi">
+      <button type="button" class="lb-tutup" id="lb-tutup">Tutup</button>
+      <img id="lb-img" alt="">
+      <div class="lb-bawah">
+        <div>
+          <strong id="lb-judul"></strong>
+          <p id="lb-desk"></p>
+          <a id="lb-link" href="#" rel="noopener">Buka proyek</a>
+        </div>
+        <div class="lb-kontrol">
+          <button type="button" id="lb-prev">Sebelumnya</button>
+          <span id="lb-no"></span>
+          <button type="button" id="lb-next">Berikutnya</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
